@@ -7,3 +7,23 @@ Content-Type: application/json
     "email": "asdfa@gmail.com",
     "password": "password"
 }
+
+### Find a user with id
+GET http://localhost:3000/auth/3
+
+
+### Find the user with email
+GET http://localhost:3000/auth?email=asdfa@gmail.com
+
+
+### Delete the user with id
+DELETE http://localhost:3000/auth/2
+
+### Update user with given id
+PATCH http://localhost:3000/auth/3
+Content-Type: application/json
+
+{
+    "email": "howdy@howdymail.com",
+    "password": "passwody"
+}
