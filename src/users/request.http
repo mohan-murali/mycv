@@ -4,16 +4,32 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "asdfa@gmail.com",
-    "password": "password"
+    "email": "test@gmail.com",
+    "password": "1234567"
 }
+
+### Login the user
+
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "1234567"
+}
+
+### Get the singed in user details
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
 
 ### Find a user with id
 GET http://localhost:3000/auth/3
 
 
 ### Find the user with email
-GET http://localhost:3000/auth?email=asdfa@gmail.com
+GET http://localhost:3000/auth?email=unique@gmail.com
 
 
 ### Delete the user with id
